@@ -1,0 +1,13 @@
+{
+    
+    "require": {
+        "messagebird/php-rest-api": "^1.6",
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload":{
+    		"psr-4":{
+    		"SMSTransmitter\\":"app/SMSTransmitter"
+
+    	}
+   }
+}

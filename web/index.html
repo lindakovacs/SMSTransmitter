@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>MessageBird &copy</title>
+
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Custom Theme Style -->
+	<link href="stylesheet.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+	<div class=" jumbotron text-center">
+		<h1>Sample MessageBird API Consumer</h1>
+		<h3>
+			<a href="https://www.messagebird.com" target= "_blank"><img class="logo" src="logo.svg" height="32" alt="logo"></a>
+		</h3>
+		<hr>
+		<h5><strong>powered by </strong>
+			<a href="https://github.com/messagebird/php-rest-api/" target="_blank">MessageBird PHP API</a>
+		</h5>
+		<h5><strong>Source code on github </strong>
+			<a href="https://github.com/medunes" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+		</h5>
+	</div>
+	<div class="container-fluid">
+		<form action="../index.php" method="POST">
+			<div class="col-md-6 col-xs-12">
+				<div class="form-group">
+					<label for="recipient">Recipient:</label><input value="0021696390001" required name="recipient" id="recipient" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="form-group">
+					<label for="originator">Originator:</label><input value="medunes" required name="originator" id="originator" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="form-group">
+					<label for="body">Message:</label><textarea required class="form-control" id="body" name="body" rows="10" cols="160">This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. </textarea>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="form-group">
+					<label for="response">Response:</label><textarea readonly class="form-control" id="response" rows="10" cols="160"></textarea>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-md btn-success">Send SMS! <i id="sending" class="fa fa-refresh fa-spin"></i></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-center text-muted">Sample MessageBird API Consumer</p>
+			<p class="text-center text-muted">Coded by  <a href="http://www.medunes.net" target="_blank">medunes</a></p>
+		</div>
+	</footer>
+
+	<!-- jquery -->	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<!-- custom script -->	
+	<script src="script.js"></script>
+</body>
