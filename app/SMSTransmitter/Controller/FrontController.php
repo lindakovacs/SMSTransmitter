@@ -54,7 +54,6 @@ class FrontController
             }
             $rateControl = new RateControl();
             $messageResult=[];
-            $i=1;
             foreach ($splitMessages as $partialMessage) {
                 $rateControl->limit();
                 try {
