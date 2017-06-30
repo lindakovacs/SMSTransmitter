@@ -55,7 +55,6 @@ class FrontController
             $rateControl = new RateControl();
             $messageResult=[];
             foreach ($splitMessages as $partialMessage) {
-                $rateControl->limit();
                 try {
                     $partialMessageResult=$messagebirdTransmitter->sendPartialMessage($messagebirdMessage, $parameters, $partialMessage);
                 } catch (AuthenticateException $e) {
@@ -70,8 +69,11 @@ class FrontController
                 }
                 $messageResult[]=$partialMessageResult;
             }
-            $successResponse =  new JsonResponse(["success"=>$messageResult], JsonResponse::STATUS_OK);
-            $this->returnResponse($successResponse);
+            foreach ($messageResult as $partialMessageResult) {
+                $rateControl->limit();
+                $successResponse =  new JsonResponse(["success"=>$partialMessageResult], JsonResponse::STATUS_OK);
+                $this->returnResponse($successResponse);
+            }
         } else {
             try {
                 $messageResult=$messagebirdTransmitter->sendMessage($messagebirdMessage, $parameters);
