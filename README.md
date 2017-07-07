@@ -3,4 +3,4 @@ A simple PHP/OpenSource SMS transmitter based on the [MessageBird](https://www.m
 
 Test it online here [here]( https://medunes.net/sms-transmitter/web/).
 
-![alt text](https://github.com/sms-transmitter/web/screenshot.jpg)
+![alt text](https://medunes.net/sms-transmitter/web/screenshot.jpg)
